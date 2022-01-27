@@ -11,7 +11,7 @@ function init() {
   var loader = new THREE.GLTFLoader();
 
   loader.load(
-    "./scene.gltf",
+    "./Stork.glb",
     function (gltf) {
       scene.add(gltf.scene);
     },
@@ -21,14 +21,16 @@ function init() {
     }
   );
 
+
+
   geometry = new THREE.IcosahedronGeometry(200, 1);
   material = new THREE.MeshBasicMaterial({
-    color: 0xfffffff,
+    color: 0x000000,
     wireframe: false,
     wireframeLinewidth: 2,
   });
   mesh = new THREE.Mesh(geometry, material);
-  scene.add(mesh);
+//   scene.add(mesh);
 
   camera = new THREE.PerspectiveCamera(
     75,
@@ -43,7 +45,7 @@ function init() {
   //   scene.add(light);
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
-  //   renderer.setClearColor("#ffffff");
+    renderer.setClearColor("#ffffff");
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 }
