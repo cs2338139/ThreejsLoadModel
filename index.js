@@ -8,16 +8,18 @@ animate();
 function init() {
   scene = new THREE.Scene();
 
-  const loader = new THREE.GLTFLoader();
-  loader.load( 'scene.gltf', function ( gltf ) {
+  var loader = new THREE.GLTFLoader();
 
-	scene.add( gltf.scene );
-
-}, undefined, function ( error ) {
-
-	console.error( error );
-
-} );
+  loader.load(
+    "scene.gltf",
+    function (gltf) {
+      scene.add(gltf.scene);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
 
   geometry = new THREE.IcosahedronGeometry(200, 1);
   material = new THREE.MeshBasicMaterial({
