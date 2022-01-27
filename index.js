@@ -11,7 +11,7 @@ function init() {
   var loader = new THREE.GLTFLoader();
 
   loader.load(
-    "./Stork.glb",
+    "./cloth/scene.gltf",
     function (gltf) {
       scene.add(gltf.scene);
     },
@@ -40,9 +40,9 @@ function init() {
   );
   camera.position.z = 500;
 
-  //   light = new THREE.DirectionalLight("rgb(255, 255, 255)", 1.2);
-  //   light.position.set(1, 1, 1);
-  //   scene.add(light);
+    light = new THREE.DirectionalLight("rgb(255, 255, 255)", 1.2);
+    light.position.set(1, 1, 1);
+    // scene.add(light);
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setClearColor("#ffffff");
