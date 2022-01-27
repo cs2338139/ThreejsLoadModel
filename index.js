@@ -1,4 +1,3 @@
-// import { GLTFLoader } from './3rd-party/Threejs/examples/jsm/loaders/GLTFLoader.js';
 var scene, camera, renderer;
 var geometry, material, mesh;
 var light;
