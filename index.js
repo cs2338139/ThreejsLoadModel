@@ -11,7 +11,7 @@ function init() {
   var loader = new THREE.GLTFLoader();
 
   loader.load(
-    "scene.gltf",
+    "./scene.gltf",
     function (gltf) {
       scene.add(gltf.scene);
     },
